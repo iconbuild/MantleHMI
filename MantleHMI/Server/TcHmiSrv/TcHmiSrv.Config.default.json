@@ -883,6 +883,57 @@
             },
             "USEMAPPING": true
         },
+        "ADS.PLC1.GVL.fbMessageLog.arrMessageLog.0.sMessage": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::fbMessageLog::arrMessageLog[0]::sMessage",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "maxLength": 255
+                    },
+                    {
+                        "$ref": "tchmi:general#/definitions/String"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL.fbMessageLog.arrMessageLog.1.sMessage": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::fbMessageLog::arrMessageLog[1]::sMessage",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "maxLength": 255
+                    },
+                    {
+                        "$ref": "tchmi:general#/definitions/String"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL.fbMessageLog.arrMessageLog.2.sMessage": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::fbMessageLog::arrMessageLog[2]::sMessage",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "maxLength": 255
+                    },
+                    {
+                        "$ref": "tchmi:general#/definitions/String"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "ADS.RuntimePorts": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -2402,6 +2453,103 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL.stMantleToMagma.bAutomaticMode": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bAutomaticMode",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bBBULow": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bBBULow",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bExtEStop": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bExtEStop",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bFreqInvReadyForOp": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bFreqInvReadyForOp",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "comment": "G160 IO"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bIntEStop": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bIntEStop",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bManualMode": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bManualMode",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bRotaryFlapClosed": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bRotaryFlapClosed",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bRotaryFlapOpened": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bRotaryFlapOpened",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bRotaryFlapTempOK": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bRotaryFlapTempOK",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.MAIN.fbG160.iCurrentFault": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -2418,7 +2566,14 @@
             "DYNAMIC": true,
             "MAPPING": "PLC1::MAIN::fbG160::sFaultCodeString",
             "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                "allOf": [
+                    {
+                        "maxLength": 255
+                    },
+                    {
+                        "$ref": "tchmi:general#/definitions/String"
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -3295,6 +3450,9 @@
                 "ADS.AdsSyncReadStateReq": 3,
                 "ADS.CheckLicense": 3,
                 "ADS.Diagnostics": 1,
+                "ADS.PLC1.GVL.fbMessageLog.arrMessageLog.0.sMessage": 3,
+                "ADS.PLC1.GVL.fbMessageLog.arrMessageLog.1.sMessage": 3,
+                "ADS.PLC1.GVL.fbMessageLog.arrMessageLog.2.sMessage": 3,
                 "ChangeUserSettings": 3,
                 "ConfirmAlarm": 3,
                 "CreateEvent": 3,
@@ -3315,8 +3473,18 @@
                 "LocalizeText": 3,
                 "Login": 3,
                 "Logout": 3,
+                "PLC1.GVL.stMantleToMagma.bAutomaticMode": 3,
+                "PLC1.GVL.stMantleToMagma.bBBULow": 3,
+                "PLC1.GVL.stMantleToMagma.bExtEStop": 3,
+                "PLC1.GVL.stMantleToMagma.bFreqInvReadyForOp": 3,
+                "PLC1.GVL.stMantleToMagma.bIntEStop": 3,
+                "PLC1.GVL.stMantleToMagma.bManualMode": 3,
+                "PLC1.GVL.stMantleToMagma.bRotaryFlapClosed": 3,
+                "PLC1.GVL.stMantleToMagma.bRotaryFlapOpened": 3,
+                "PLC1.GVL.stMantleToMagma.bRotaryFlapTempOK": 3,
                 "PLC1.MAIN.fbG160.iCurrentFault": 3,
                 "PLC1.MAIN.fbG160.sFaultCodeString": 3,
+                "PLC1.MAIN.fbG160.stG160Signals.stIn.bFreqInvReadyForOp": 3,
                 "PLC1.MAIN.fbSiloLEDLevel": 3,
                 "PLC1.MAIN.fbSiloLEDLevel.bHiHiLevelLED": 3,
                 "PLC1.MAIN.fbSiloLEDLevel.bHiLevelLED": 3,

@@ -1,5 +1,5 @@
-﻿<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-mode="Content" data-tchmi-min-width="100" data-tchmi-min-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-min-height="100" data-tchmi-min-height-unit="%">
-<div id="MainScreenRegion" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-height="1268" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-width="805" data-tchmi-width-unit="px" data-tchmi-background-image-width="1200" data-tchmi-background-image-height="3000" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-background-image-width-unit="px" data-tchmi-background-image-height-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-zindex="1" data-tchmi-target-content="Main Regions/SiloOverview.content" data-tchmi-height-mode="Content" data-tchmi-width-mode="Content">
+﻿<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-mode="Content" data-tchmi-min-width="100" data-tchmi-min-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-min-height="100" data-tchmi-min-height-unit="%" data-tchmi-zindex="1">
+<div id="MainScreenRegion" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-height="1268" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-width="805" data-tchmi-width-unit="px" data-tchmi-background-image-width="1200" data-tchmi-background-image-height="3000" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-background-image-width-unit="px" data-tchmi-background-image-height-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-zindex="0" data-tchmi-target-content="Main Regions/SiloOverview.content" data-tchmi-height-mode="Content" data-tchmi-width-mode="Content" data-tchmi-creator-locked="True">
 <script data-tchmi-target-attribute="data-tchmi-background-image-padding" type="application/json">
 {
   "left": 0,
@@ -49,7 +49,7 @@
 
 
 </div>
-<div id="TcHmiTextblock_387" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="82" data-tchmi-height-unit="px" data-tchmi-left="-0" data-tchmi-left-unit="px" data-tchmi-top="-0" data-tchmi-top-unit="px" data-tchmi-width="806" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-background-image="Images/IconGradient.png" data-tchmi-background-image-width="100" data-tchmi-ignore-escape-sequences="false" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-creator-locked="True">
+<div id="TcHmiTextblock_387" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="82" data-tchmi-height-unit="px" data-tchmi-left="-0" data-tchmi-left-unit="px" data-tchmi-top="-0" data-tchmi-top-unit="px" data-tchmi-width="806" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-background-image="Images/IconGradient.png" data-tchmi-background-image-width="100" data-tchmi-ignore-escape-sequences="false" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-creator-locked="True" data-tchmi-zindex="1">
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
   "color": "rgba(0, 0, 0, 1)"
@@ -66,6 +66,35 @@
   "rightUnit": "px",
   "topUnit": "px",
   "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_462" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="131" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.GVL.fbMessageLog.arrMessageLog.0.sMessage%/s%" data-tchmi-top="1190" data-tchmi-top-unit="px" data-tchmi-width="640" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="14">
+
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(255, 255, 255, 1)"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_463" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="91" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Message Log:" data-tchmi-top="1189" data-tchmi-top-unit="px" data-tchmi-width="120" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="18">
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(255, 255, 255, 1)"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_464" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="131" data-tchmi-left-unit="px" data-tchmi-text="%s%ADS.PLC1.GVL.fbMessageLog.arrMessageLog.1.sMessage%/s%" data-tchmi-top="1220" data-tchmi-top-unit="px" data-tchmi-width="640" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="14">
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(255, 255, 255, 1)"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_465" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="131" data-tchmi-left-unit="px" data-tchmi-top="1250" data-tchmi-top-unit="px" data-tchmi-width="640" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="14" data-tchmi-text="%s%ADS.PLC1.GVL.fbMessageLog.arrMessageLog.2.sMessage%/s%">
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(255, 255, 255, 1)"
 }
 </script>
 </div>

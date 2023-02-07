@@ -106,32 +106,6 @@
 }
 </script>
 </div>
-<div id="FreqInv" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="194" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
-
-
-
-<script data-tchmi-target-attribute="data-tchmi-stroke-color" type="application/json">
-{
-  "color": "None"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-fill-color" type="application/json">
-{
-  "angle": 0.0,
-  "stopPoints": [
-    {
-      "color": "rgba(149, 149, 149, 1)",
-      "stop": "0.08%"
-    },
-    {
-      "color": "rgba(243, 243, 243, 1)",
-      "stop": "100%"
-    }
-  ]
-}
-</script>
-</div>
 <div id="TcHmiTextblock_442" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="72" data-tchmi-left-unit="px" data-tchmi-text="Manual Mode" data-tchmi-top="217" data-tchmi-top-unit="px" data-tchmi-width="225" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-text-font-family="Helvetica" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
 
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
@@ -172,6 +146,93 @@
   ]
 }
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.GVL.stMantleToMagma.bManualMode%/s%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.stMantleToMagma.bManualMode%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%ManualMode::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(197, 12, 12, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(255, 131, 131, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%ManualMode::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(149, 149, 149, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(243, 243, 243, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
 </div>
 <div id="AutoMode" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="240" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
@@ -197,6 +258,93 @@
     }
   ]
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.GVL.stMantleToMagma.bAutomaticMode%/s%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.stMantleToMagma.bAutomaticMode%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%AutoMode::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(197, 12, 12, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(255, 131, 131, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%AutoMode::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(149, 149, 149, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(243, 243, 243, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
 </script>
 </div>
 <div id="EStopInt" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="263" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
@@ -224,6 +372,93 @@
   ]
 }
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.GVL.stMantleToMagma.bIntEStop%/s%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.stMantleToMagma.bIntEStop%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%EStopInt::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(197, 12, 12, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(255, 131, 131, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%EStopInt::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(149, 149, 149, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(243, 243, 243, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
 </div>
 <div id="EStopExt" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="286" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
@@ -249,6 +484,93 @@
     }
   ]
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.GVL.stMantleToMagma.bExtEStop%/s%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.stMantleToMagma.bExtEStop%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%EStopExt::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(197, 12, 12, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(255, 131, 131, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%EStopExt::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(149, 149, 149, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(243, 243, 243, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
 </script>
 </div>
 <div id="RotFlapClosed" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="309" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
@@ -276,6 +598,93 @@
   ]
 }
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.GVL.stMantleToMagma.bRotaryFlapClosed%/s%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.stMantleToMagma.bRotaryFlapClosed%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%RotFlapClosed::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(197, 12, 12, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(255, 131, 131, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%RotFlapClosed::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(149, 149, 149, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(243, 243, 243, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
 </div>
 <div id="RotFlapOpened" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="332" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
@@ -301,6 +710,93 @@
     }
   ]
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.GVL.stMantleToMagma.bRotaryFlapOpened%/s%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.stMantleToMagma.bRotaryFlapOpened%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%RotFlapOpened::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(197, 12, 12, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(255, 131, 131, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%RotFlapOpened::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(149, 149, 149, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(243, 243, 243, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
 </script>
 </div>
 <div id="RotFlapTempOK" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="355" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
@@ -328,8 +824,95 @@
   ]
 }
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.GVL.stMantleToMagma.bRotaryFlapTempOK%/s%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.stMantleToMagma.bRotaryFlapTempOK%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%RotFlapTempOK::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(197, 12, 12, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(255, 131, 131, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%RotFlapTempOK::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(149, 149, 149, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(243, 243, 243, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
 </div>
-<div id="RotSensStat" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="378" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
+<div id="BBULow" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="378" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
 
 
@@ -353,6 +936,93 @@
     }
   ]
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.GVL.stMantleToMagma.bBBULow%/s%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.stMantleToMagma.bBBULow%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%BBULow::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(197, 12, 12, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(255, 131, 131, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%BBULow::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(149, 149, 149, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(243, 243, 243, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
 </script>
 </div>
 <div id="Compressor" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="445" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
@@ -380,6 +1050,15 @@
   ]
 }
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.MAIN.fbG160.stG160Signals.stIn.bFreqInvReadyForOp%/s%",
+    "actions": []
+  }
+]
+</script>
 </div>
 <div id="Vibrator" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="468" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
@@ -405,6 +1084,15 @@
     }
   ]
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.MAIN.fbG160.stG160Signals.stIn.bFreqInvReadyForOp%/s%",
+    "actions": []
+  }
+]
 </script>
 </div>
 <div id="RotaryFlapClosing" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="491" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
@@ -432,6 +1120,15 @@
   ]
 }
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.MAIN.fbG160.stG160Signals.stIn.bFreqInvReadyForOp%/s%",
+    "actions": []
+  }
+]
+</script>
 </div>
 <div id="RotFlapOpening" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="514" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
@@ -457,6 +1154,15 @@
     }
   ]
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.MAIN.fbG160.stG160Signals.stIn.bFreqInvReadyForOp%/s%",
+    "actions": []
+  }
+]
 </script>
 </div>
 <div id="PinchValve" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="537" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
@@ -484,6 +1190,15 @@
   ]
 }
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.MAIN.fbG160.stG160Signals.stIn.bFreqInvReadyForOp%/s%",
+    "actions": []
+  }
+]
+</script>
 </div>
 <div id="ConveyingAir" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="560" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
@@ -509,6 +1224,15 @@
     }
   ]
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.MAIN.fbG160.stG160Signals.stIn.bFreqInvReadyForOp%/s%",
+    "actions": []
+  }
+]
 </script>
 </div>
 <div id="Bypass" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="583" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
@@ -536,6 +1260,15 @@
   ]
 }
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.MAIN.fbG160.stG160Signals.stIn.bFreqInvReadyForOp%/s%",
+    "actions": []
+  }
+]
+</script>
 </div>
 <div id="Venting" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="606" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
@@ -561,6 +1294,15 @@
     }
   ]
 }
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.MAIN.fbG160.stG160Signals.stIn.bFreqInvReadyForOp%/s%",
+    "actions": []
+  }
+]
 </script>
 </div>
 <div id="TcHmiTextblock_443" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="72" data-tchmi-left-unit="px" data-tchmi-text="Automatic Mode" data-tchmi-top="240" data-tchmi-top-unit="px" data-tchmi-width="225" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-text-font-family="Helvetica" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
@@ -846,7 +1588,7 @@
 }
 </script>
 </div>
-<div id="TcHmiTextblock_460" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="106" data-tchmi-left-unit="px" data-tchmi-text="%f%%s%PLC1.MAIN.fbG160.sFaultCodeString%/s%%/f%" data-tchmi-top="87" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-text-font-family="Helvetica" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
+<div id="TcHmiTextblock_460" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="60" data-tchmi-height-unit="px" data-tchmi-left="106" data-tchmi-left-unit="px" data-tchmi-text="%s%PLC1.MAIN.fbG160.sFaultCodeString%/s%" data-tchmi-top="87" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-text-font-family="Helvetica" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "left": 5,
@@ -1014,6 +1756,116 @@
   "bottomLeftUnit": "px",
   "bottomRightUnit": "px"
 }
+</script>
+</div>
+<div id="FreqInv" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="34" data-tchmi-left-unit="px" data-tchmi-top="194" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
+<script data-tchmi-target-attribute="data-tchmi-stroke-color" type="application/json">
+{
+  "color": "None"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-fill-color" type="application/json">
+{
+  "angle": 0.0,
+  "stopPoints": [
+    {
+      "color": "rgba(149, 149, 149, 1)",
+      "stop": "0.08%"
+    },
+    {
+      "color": "rgba(243, 243, 243, 1)",
+      "stop": "100%"
+    }
+  ]
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.GVL.stMantleToMagma.bFreqInvReadyForOp%/s%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.stMantleToMagma.bFreqInvReadyForOp%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%FreqInv::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(197, 12, 12, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(255, 131, 131, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%FreqInv::FillColor%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Color",
+                  "value": {
+                    "angle": 0.0,
+                    "stopPoints": [
+                      {
+                        "color": "rgba(149, 149, 149, 1)",
+                        "stop": "0%"
+                      },
+                      {
+                        "color": "rgba(243, 243, 243, 1)",
+                        "stop": "100%"
+                      }
+                    ]
+                  }
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
 </script>
 </div>
 </div>
