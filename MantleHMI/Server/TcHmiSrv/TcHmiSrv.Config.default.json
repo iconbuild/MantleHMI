@@ -26,7 +26,11 @@
     "DEFAULTTIMEFORMATLOCALE": "client",
     "DEFAULTTIMEZONE": "client",
     "DEFAULTUSERGROUP": "__SystemUsers",
-    "DEFINITIONS": {},
+    "DEFINITIONS": {
+        "PLC1.FB_SiloLevel": {
+            "type": "object"
+        }
+    },
     "DEFLATECOMPRESSIONLEVEL": 5,
     "DIAGNOSTICS_DOMAINS": [],
     "DISABLED_CONFIGURATION_HINTS": [],
@@ -431,7 +435,7 @@
         }
     },
     "PERMESSAGEDEFLATEENABLED": true,
-    "PROJECTNAME": "MantleHMI",
+    "PROJECTNAME": "MantleHMI_1",
     "PROJECTVERSION": "1.0.0.0",
     "REMOTESERVERS": {},
     "REMOTESERVERS_CERTIFICATES": [],
@@ -2398,138 +2402,43 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.MAIN.fbSiloLEDLevel.bHiHiLevelLED": {
+        "PLC1.MAIN.fbG160.iCurrentFault": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::bHiHiLevelLED",
+            "MAPPING": "PLC1::MAIN::fbG160::iCurrentFault",
             "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcAddressType": "Output"
-                        }
-                    }
-                ]
+                "$ref": "tchmi:general#/definitions/INT"
             },
             "USEMAPPING": true
         },
-        "PLC1.MAIN.fbSiloLEDLevel.bHiLevelLED": {
+        "PLC1.MAIN.fbG160.sFaultCodeString": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::bHiLevelLED",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcAddressType": "Output"
-                        }
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.MAIN.fbSiloLEDLevel.bLoLevelLED": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::bLoLevelLED",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcAddressType": "Output"
-                        }
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.MAIN.fbSiloLEDLevel.bLoLoLevelLED": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::bLoLoLevelLED",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcAddressType": "Output"
-                        }
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.MAIN.fbSiloLEDLevel.bMidLevelLED": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::bMidLevelLED",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcAddressType": "Output"
-                        }
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.MAIN.fbSiloLEDLevel.fEstimatedMaxFillLevel": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::fEstimatedMaxFillLevel",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/REAL"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.MAIN.fbSiloLEDLevel.fEstimatedMinFillLevel": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::fEstimatedMinFillLevel",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/REAL"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.MAIN.fbSiloLEDLevel.sLoLevelColor": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::sLoLevelColor",
+            "MAPPING": "PLC1::MAIN::fbG160::sFaultCodeString",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/STRING%2880%29"
             },
             "USEMAPPING": true
         },
-        "PLC1.MAIN.fbSiloLEDLevel.sLoLoLevelColor": {
+        "PLC1.MAIN.fbSiloLEDLevel.fMaxFill": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::sLoLoLevelColor",
+            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::fMaxFill",
             "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.fbSiloLEDLevel.fMinFill": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbSiloLEDLevel::fMinFill",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
             },
             "USEMAPPING": true
         },
@@ -3406,6 +3315,9 @@
                 "LocalizeText": 3,
                 "Login": 3,
                 "Logout": 3,
+                "PLC1.MAIN.fbG160.iCurrentFault": 3,
+                "PLC1.MAIN.fbG160.sFaultCodeString": 3,
+                "PLC1.MAIN.fbSiloLEDLevel": 3,
                 "PLC1.MAIN.fbSiloLEDLevel.bHiHiLevelLED": 3,
                 "PLC1.MAIN.fbSiloLEDLevel.bHiLevelLED": 3,
                 "PLC1.MAIN.fbSiloLEDLevel.bLoLevelLED": 3,
@@ -3413,6 +3325,8 @@
                 "PLC1.MAIN.fbSiloLEDLevel.bMidLevelLED": 3,
                 "PLC1.MAIN.fbSiloLEDLevel.fEstimatedMaxFillLevel": 3,
                 "PLC1.MAIN.fbSiloLEDLevel.fEstimatedMinFillLevel": 3,
+                "PLC1.MAIN.fbSiloLEDLevel.fMaxFill": 3,
+                "PLC1.MAIN.fbSiloLEDLevel.fMinFill": 3,
                 "PLC1.MAIN.fbSiloLEDLevel.sLoLevelColor": 3,
                 "PLC1.MAIN.fbSiloLEDLevel.sLoLoLevelColor": 3,
                 "SetLocale": 3,
