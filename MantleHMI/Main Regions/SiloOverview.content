@@ -390,6 +390,6 @@
 </div>
 <div id="TcHmiImage_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="1230" data-tchmi-height-unit="px" data-tchmi-left="466" data-tchmi-left-unit="px" data-tchmi-top="-11" data-tchmi-top-unit="px" data-tchmi-width="340" data-tchmi-width-unit="px" data-tchmi-src="Images/Background.png" data-tchmi-zindex="1" data-tchmi-creator-locked="True">
 </div>
-<div id="TcHmiRegion" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-height="500" data-tchmi-height-unit="px" data-tchmi-left="454" data-tchmi-left-unit="px" data-tchmi-top="438" data-tchmi-top-unit="px" data-tchmi-width="500" data-tchmi-width-unit="px" data-tchmi-target-content="Main Regions/G160.content" data-tchmi-zindex="16" data-tchmi-width-mode="Content" data-tchmi-height-mode="Content">
+<div id="TcHmiRegion" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-height="500" data-tchmi-height-unit="px" data-tchmi-left="455" data-tchmi-left-unit="px" data-tchmi-top="419" data-tchmi-top-unit="px" data-tchmi-width="500" data-tchmi-width-unit="px" data-tchmi-target-content="Main Regions/G160.content" data-tchmi-zindex="16" data-tchmi-width-mode="Content" data-tchmi-height-mode="Content">
 </div>
 </div>

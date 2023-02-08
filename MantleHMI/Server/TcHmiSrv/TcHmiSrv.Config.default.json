@@ -2473,6 +2473,36 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL.stMantleToMagma.bBypass": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bBypass",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bCompressorOn": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bCompressorOn",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bConveyingAir": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bConveyingAir",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL.stMantleToMagma.bExtEStop": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -2520,11 +2550,41 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL.stMantleToMagma.bPinchValveEnergized": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bPinchValveEnergized",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bPlantStartInAuto": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bPlantStartInAuto",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL.stMantleToMagma.bRotaryFlapClosed": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL::stMantleToMagma::bRotaryFlapClosed",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bRotaryFlapClosing": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bRotaryFlapClosing",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
             },
@@ -2540,11 +2600,41 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL.stMantleToMagma.bRotaryFlapOpening": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bRotaryFlapOpening",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL.stMantleToMagma.bRotaryFlapTempOK": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL::stMantleToMagma::bRotaryFlapTempOK",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bVenting": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bVenting",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMantleToMagma.bVibratorOn": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMantleToMagma::bVibratorOn",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
             },
@@ -3475,13 +3565,22 @@
                 "Logout": 3,
                 "PLC1.GVL.stMantleToMagma.bAutomaticMode": 3,
                 "PLC1.GVL.stMantleToMagma.bBBULow": 3,
+                "PLC1.GVL.stMantleToMagma.bBypass": 3,
+                "PLC1.GVL.stMantleToMagma.bCompressorOn": 3,
+                "PLC1.GVL.stMantleToMagma.bConveyingAir": 3,
                 "PLC1.GVL.stMantleToMagma.bExtEStop": 3,
                 "PLC1.GVL.stMantleToMagma.bFreqInvReadyForOp": 3,
                 "PLC1.GVL.stMantleToMagma.bIntEStop": 3,
                 "PLC1.GVL.stMantleToMagma.bManualMode": 3,
+                "PLC1.GVL.stMantleToMagma.bPinchValveEnergized": 3,
+                "PLC1.GVL.stMantleToMagma.bPlantStartInAuto": 3,
                 "PLC1.GVL.stMantleToMagma.bRotaryFlapClosed": 3,
+                "PLC1.GVL.stMantleToMagma.bRotaryFlapClosing": 3,
                 "PLC1.GVL.stMantleToMagma.bRotaryFlapOpened": 3,
+                "PLC1.GVL.stMantleToMagma.bRotaryFlapOpening": 3,
                 "PLC1.GVL.stMantleToMagma.bRotaryFlapTempOK": 3,
+                "PLC1.GVL.stMantleToMagma.bVenting": 3,
+                "PLC1.GVL.stMantleToMagma.bVibratorOn": 3,
                 "PLC1.MAIN.fbG160.iCurrentFault": 3,
                 "PLC1.MAIN.fbG160.sFaultCodeString": 3,
                 "PLC1.MAIN.fbG160.stG160Signals.stIn.bFreqInvReadyForOp": 3,
