@@ -2453,6 +2453,36 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL.stMagmaToMantle.bG160ManualStart": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMagmaToMantle::bG160ManualStart",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMagmaToMantle.bG160ManualStop": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMagmaToMantle::bG160ManualStop",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL.stMagmaToMantle.bG160Reset": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL::stMagmaToMantle::bG160Reset",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL.stMantleToMagma.bAutomaticMode": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3563,6 +3593,9 @@
                 "LocalizeText": 3,
                 "Login": 3,
                 "Logout": 3,
+                "PLC1.GVL.stMagmaToMantle.bG160ManualStart": 3,
+                "PLC1.GVL.stMagmaToMantle.bG160ManualStop": 3,
+                "PLC1.GVL.stMagmaToMantle.bG160Reset": 3,
                 "PLC1.GVL.stMantleToMagma.bAutomaticMode": 3,
                 "PLC1.GVL.stMantleToMagma.bBBULow": 3,
                 "PLC1.GVL.stMantleToMagma.bBypass": 3,

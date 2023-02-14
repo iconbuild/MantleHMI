@@ -113,7 +113,6 @@
   <ItemGroup>
     <Folder Include="Fonts\" />
     <Folder Include="Images" />
-    <Folder Include="Images\Manifest" />
     <Folder Include="Imports" />
     <Folder Include="Imports\Images" />
     <Folder Include="Imports\Videos" />
@@ -134,7 +133,13 @@
     <Content Include="Images\Background.png">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\Expand Arrow.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Images\IconGradient.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\Retract Arrow.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\Screenshot %2895%29.png">
@@ -143,7 +148,16 @@
     <Content Include="Images\Silo.png">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\Silo_New-transformed.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Images\Transparent_Logo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\WarningIconRed.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Main Regions\G160StopWarning.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Main Regions\G160.content">
@@ -325,30 +339,6 @@
       <Visible>true</Visible>
     </Content>
     <Content Include="Images\Beckhoff_Logo.svg">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-0-75x.png">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-1-5x.png">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-1x.png">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-2x.png">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-3x.png">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-4x.png">
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
