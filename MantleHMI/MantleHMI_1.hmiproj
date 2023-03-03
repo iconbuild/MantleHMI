@@ -157,6 +157,9 @@
     <Content Include="Images\WarningIconRed.png">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Main Regions\EmergencyAirsweeps.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Main Regions\G160StopWarning.content">
       <SubType>Content</SubType>
     </Content>
